@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> - <%= site.name %></title>
+    <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+    <%- include('partials/nav') %>
+    
+    <!-- Hero -->
+    <section class="pt-32 pb-20 bg-gradient-to-b from-dark-800 to-dark-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="section-title mb-6">About Me</h1>
+            <p class="text-xl text-gray-300">Get to know the person behind the content</p>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Bio Section -->
+            <div class="grid lg:grid-cols-2 gap-12 items-start mb-20">
+                <div class="relative">
+                    <div class="aspect-[3/4] rounded-3xl overflow-hidden border-4 border-primary-500/20 shadow-2xl shadow-primary-500/10">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-primary-700/20 flex items-center justify-center">
+                            <p class="text-gray-400 text-center px-8">Add your portrait to /public/images/about-portrait.jpg</p>
+                        </div>
+                        <img src="/images/about-portrait.jpg" alt="Portrait" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h2 class="text-3xl font-display font-bold mb-4 gradient-text">My Story</h2>
+                        <div class="space-y-4 text-gray-300 leading-relaxed">
+                            <p>
+                                I started my journey as a content creator in [YEAR], driven by a passion for authentic self-expression and connecting with amazing people who appreciate quality content.
+                            </p>
+                            <p>
+                                What sets me apart is my commitment to creating content that's both elegant and exciting. I believe in quality over quantity, and every piece of content I create is carefully crafted with my subscribers in mind.
+                            </p>
+                            <p>
+                                Beyond content creation, I'm passionate about [YOUR INTERESTS - e.g., fitness, travel, photography, cooking]. These interests often inspire my content and help me bring fresh, unique perspectives to everything I create.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Facts -->
+                    <div class="card">
+                        <h3 class="text-xl font-bold mb-4">Quick Facts</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-primary-500 mr-3">✨</span>
+                                <span class="text-gray-300"><strong>Years Active:</strong> 3+</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary-500 mr-3">🎯</span>
+                                <span class="text-gray-300"><strong>Content Style:</strong> Luxury lifestyle & exclusive content</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary-500 mr-3">📍</span>
+                                <span class="text-gray-300"><strong>Based in:</strong> [Your Location]</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary-500 mr-3">🌟</span>
+                                <span class="text-gray-300"><strong>Specialties:</strong> Custom content, collaborations, exclusive experiences</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- What Makes Me Different -->
+            <div class="mb-20">
+                <h2 class="text-3xl font-display font-bold mb-8 text-center gradient-text">What Makes Me Different</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="card text-center">
+                        <div class="w-16 h-16 bg-primary-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Premium Quality</h3>
+                        <p class="text-gray-400">Every piece of content is professionally produced with attention to detail</p>
+                    </div>
+                    
+                    <div class="card text-center">
+                        <div class="w-16 h-16 bg-primary-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Authentic Connection</h3>
+                        <p class="text-gray-400">I genuinely engage with my community and value every subscriber</p>
+                    </div>
+                    
+                    <div class="card text-center">
+                        <div class="w-16 h-16 bg-primary-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Professional Boundaries</h3>
+                        <p class="text-gray-400">Clear communication and respect make for the best experiences</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Milestones -->
+            <div class="card mb-20">
+                <h2 class="text-3xl font-display font-bold mb-8 gradient-text">Milestones & Achievements</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold">1</div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-lg mb-1">Reached 5,000+ Subscribers</h3>
+                            <p class="text-gray-400">Built an amazing community of supportive fans</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold">2</div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-lg mb-1">Collaborated with Top Creators</h3>
+                            <p class="text-gray-400">Worked with industry-leading creators on exclusive content</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold">3</div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-lg mb-1">Featured in [Publication/Platform]</h3>
+                            <p class="text-gray-400">Recognized for quality content and professionalism</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold">4</div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-lg mb-1">Created 500+ Exclusive Content Pieces</h3>
+                            <p class="text-gray-400">Consistently delivering fresh, high-quality content</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Personal Touch -->
+            <div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-3xl p-8 md:p-12 text-center">
+                <h2 class="text-3xl font-display font-bold mb-4 text-white">Let's Connect</h2>
+                <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+                    I love getting to know my subscribers. Whether you want to chat, request custom content, or explore collaboration opportunities, I'm here for you.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/booking" class="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 inline-block">
+                        Book a Session
+                    </a>
+                    <a href="/contact" class="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-full border border-white/20 transition-all duration-300 hover:scale-105 backdrop-blur-sm inline-block">
+                        Send a Message
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <%- include('partials/footer') %>
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>

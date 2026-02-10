@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> - <%= site.name %></title>
+    <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+    <%- include('partials/nav') %>
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-primary-900/20 to-dark-900"></div>
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-primary-500 rounded-full blur-3xl animate-float"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-primary-600 rounded-full blur-3xl animate-float" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Text Content -->
+                <div class="text-center lg:text-left animate-slide-up">
+                    <div class="inline-block mb-4 px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-semibold">
+                        ✨ Welcome to my world
+                    </div>
+                    
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-display font-bold mb-6">
+                        <span class="block text-white">Hey, I'm</span>
+                        <span class="block gradient-text"><%= site.name %></span>
+                    </h1>
+                    
+                    <p class="text-xl sm:text-2xl text-gray-300 mb-8 leading-relaxed">
+                        <%= site.tagline %>
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <% if (social.onlyfans) { %>
+                        <a href="<%= social.onlyfans %>" target="_blank" class="btn-primary">
+                            <span class="flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z"/>
+                                </svg>
+                                Subscribe Now
+                            </span>
+                        </a>
+                        <% } %>
+                        <a href="/booking" class="btn-secondary">
+                            Book Me
+                        </a>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-white/10">
+                        <div class="text-center lg:text-left">
+                            <div class="text-3xl font-bold text-primary-500 mb-1">5K+</div>
+                            <div class="text-sm text-gray-400">Subscribers</div>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <div class="text-3xl font-bold text-primary-500 mb-1">3+</div>
+                            <div class="text-sm text-gray-400">Years Active</div>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <div class="text-3xl font-bold text-primary-500 mb-1">500+</div>
+                            <div class="text-sm text-gray-400">Content Pieces</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="relative aspect-[3/4] rounded-3xl overflow-hidden border-4 border-primary-500/20 shadow-2xl shadow-primary-500/20">
+                        <!-- Placeholder image - replace with actual hero image -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-primary-700/20 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-32 h-32 mx-auto mb-4 text-primary-500/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                <p class="text-gray-400">Replace with your hero image</p>
+                                <p class="text-sm text-gray-500 mt-2">Add to /public/images/hero.jpg</p>
+                            </div>
+                        </div>
+                        <img src="/images/hero.jpg" alt="<%= site.name %>" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-primary-500 rounded-full blur-2xl opacity-50"></div>
+                    <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-primary-600 rounded-full blur-2xl opacity-50"></div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- Featured Platforms -->
+    <section class="py-20 bg-dark-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="section-title">Find Me On</h2>
+                <p class="text-gray-400 text-lg">Connect with me on your favorite platform</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <% if (social.onlyfans) { %>
+                <a href="<%= social.onlyfans %>" target="_blank" class="card group hover:scale-105 transition-transform">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold">OnlyFans</h3>
+                        <svg class="w-6 h-6 text-primary-500 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-400">Exclusive content & behind-the-scenes</p>
+                </a>
+                <% } %>
+                
+                <% if (social.fansly) { %>
+                <a href="<%= social.fansly %>" target="_blank" class="card group hover:scale-105 transition-transform">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold">Fansly</h3>
+                        <svg class="w-6 h-6 text-primary-500 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-400">Premium content & personalized experiences</p>
+                </a>
+                <% } %>
+                
+                <% if (social.instagram) { %>
+                <a href="<%= social.instagram %>" target="_blank" class="card group hover:scale-105 transition-transform">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold">Instagram</h3>
+                        <svg class="w-6 h-6 text-primary-500 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-400">Daily updates & lifestyle content</p>
+                </a>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Preview -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative aspect-square rounded-3xl overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-primary-700/20 flex items-center justify-center">
+                        <p class="text-gray-400">Add about image to /public/images/about.jpg</p>
+                    </div>
+                    <img src="/images/about.jpg" alt="About" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                </div>
+                
+                <div>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="space-y-4 text-gray-300 text-lg">
+                        <p>
+                            Hey there! I'm a content creator passionate about bringing you authentic, high-quality content that you won't find anywhere else.
+                        </p>
+                        <p>
+                            With years of experience in the industry, I've built a community of amazing subscribers who appreciate premium content and genuine connection.
+                        </p>
+                        <p>
+                            I believe in creating content that's both tasteful and exciting, always maintaining the highest standards of quality.
+                        </p>
+                    </div>
+                    <a href="/about" class="btn-primary mt-8 inline-block">Learn More About Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-white">
+                Ready to Join?
+            </h2>
+            <p class="text-xl text-primary-100 mb-8">
+                Get access to exclusive content, behind-the-scenes footage, and personalized experiences.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <% if (social.onlyfans) { %>
+                <a href="<%= social.onlyfans %>" target="_blank" class="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105 inline-block">
+                    Subscribe Now
+                </a>
+                <% } %>
+                <a href="/platforms" class="bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-full border border-white/20 transition-all duration-300 hover:scale-105 backdrop-blur-sm inline-block">
+                    View All Platforms
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <%- include('partials/footer') %>
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>
