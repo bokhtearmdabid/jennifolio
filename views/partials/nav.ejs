@@ -3,10 +3,15 @@
         <div class="flex justify-between items-center h-20">
             <!-- Logo -->
             <a href="/" class="flex items-center space-x-3 group">
-                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center font-display font-bold text-xl group-hover:scale-110 transition-transform">
-                    <%= site.name.charAt(0) %>
-                </div>
-                <span class="font-display font-bold text-xl hidden sm:block"><%= site.name %></span>
+                <img 
+                    src="/images/logo.jpg" 
+                    alt="<%= site.name %>" 
+                    class="w-12 h-12 rounded-full object-cover group-hover:scale-110 transition-transform"
+                >
+                
+                <span class="font-display font-bold text-xl hidden sm:block">
+                    <%= site.name %>
+                </span>
             </a>
             
             <!-- Desktop Navigation -->
