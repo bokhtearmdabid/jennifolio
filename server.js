@@ -89,11 +89,14 @@ app.use((req, res) => {
 // Error Handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).render('error', { 
-    title: 'Error',
-    message: process.env.NODE_ENV === 'development' ? err.message : 'Something went wrong!'
-  });
+
+  res.status(500).send(
+    process.env.NODE_ENV === 'development'
+      ? err.message
+      : 'Something went wrong!'
+  );
 });
+
 
 // Start Server
 app.listen(PORT, () => {
